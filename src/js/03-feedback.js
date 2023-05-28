@@ -24,8 +24,8 @@ function onFormSubmit(e) {
     return;
   }
 
-  formData.email = form.email.value;
-  formData.message = form.message.value;
+  formData.email = formFeedback.email.value;
+  formData.message = formFeedback.message.value;
 
   console.log(formData);
 
