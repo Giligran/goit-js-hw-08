@@ -3,7 +3,10 @@ import throttle from 'lodash.throttle';
 const formFeedback = document.querySelector('.feedback-form');
 const STORAGE_KEY = 'feedback-form-state';
 
-let formData = {};
+let formData = {
+  email: '',
+  messsage: ''
+};
 const formDataStr = localStorage.getItem(STORAGE_KEY);
 
 if (formDataStr) {
@@ -31,7 +34,10 @@ function onFormSubmit(e) {
 
   formFeedback.reset();
   localStorage.removeItem(STORAGE_KEY);
-  formData = {};
+  formData = {
+    email: '',
+    messsage: ''
+  };
 }
 
 formFeedback.addEventListener('input', throttle(onFormInput, 500));
