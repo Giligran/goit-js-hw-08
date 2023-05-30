@@ -15,7 +15,7 @@ form.addEventListener('input', throttle(() => {
 }, 500))
 
 window.onload = function() {
-  localData = localStorage.getItem("feedback-form-state")
+  const localData = localStorage.getItem("feedback-form-state")
   if (localData) {
     const formData = JSON.parse(localData);
     form.email.value = formData.email;
